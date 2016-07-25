@@ -1,2 +1,2 @@
 # A7R
-Fichiers de script R pour traiter des données
+Fichier de scripts R pour traiter des données
