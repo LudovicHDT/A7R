@@ -66,6 +66,8 @@ V = c("VERT", "ROUGE_CLAIR", "ROUGE_SOMBRE", "RC_RS")
 TITRE = c("Vert transmis", "Rouge transmis", "Infrarouge transmis", "RC/RS")
 LABELS = c("Vert [500; 600]", "Rouge visible [600; 700]", "Infrarouge [700; 800]", "RC/RS")
 
+
+for(i in 1:4){
 plot(strptime(capteur_01$Date_Heure, "%H:%M:%S"), capteur_01[,V[i]],
      col = capteur_01$Ray, pch = 19,
      main = TITRE[i],
@@ -89,7 +91,7 @@ points(strptime(capteur_06$Date_Heure, "%H:%M:%S"), capteur_06[,V[i]], col = "li
 bozo = c("Incident", "F. excelsior", "A. cordata", "M. alba")
 couleurs = c("black", "red", "lightgreen", "lightblue")
 legend(x = "topright", legend = bozo, fill = couleurs, bty != 'n', bg = "white")
-
+}
 
 dev.off()
 
@@ -104,6 +106,8 @@ V = c("RC_strict", "RS_strict", "ZETA", "THETA")
 TITRE = c("Rouge strict transmis", "Infrarouge réduit", "Z", "Théta")
 LABELS = c("Rouge strict [655; 665]", "Infrarouge réduit [725; 735]", "ZETA", "Théta")
 
+
+for(i in 1:4){
 plot(strptime(capteur_01$Date_Heure, "%H:%M:%S"), capteur_01[,V[i]],
      col = capteur_01$Ray, pch = 19,
      main = TITRE[i],
@@ -127,7 +131,7 @@ points(strptime(capteur_06$Date_Heure, "%H:%M:%S"), capteur_06[,V[i]], col = "li
 bozo = c("Incident", "F. excelsior", "A. cordata", "M. alba")
 couleurs = c("black", "red", "lightgreen", "lightblue")
 legend(x = "topright", legend = bozo, fill = couleurs, bty != 'n', bg = "white")
-
+}
 
 dev.off()
 
