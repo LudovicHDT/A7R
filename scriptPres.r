@@ -91,8 +91,8 @@ LABELS = c("PAR (µmol.m$^{-2}$.s$^{-1}$)", "UVA-bleu (µmol.m$^{-2}$.s$^{-1}$)"
 for(i in 1:3){
   boxplot(TR[,HEADER[i]]~Id, data = TR, range = 0, main = TITRE[i],
 	  xlab = "Espèces", ylab = LABELS[i],
-	  names = c("F. exc","F. exc","A. cor","A. cor","M. al","M. al"))
-  legend(x = "bottomleft", legend = mean_in[i], title = "Valeur de l'incident",
+	  names = c("F","F","A","A","M","M"))
+  legend(x = "bottomleft", legend = mean_in[i], title = "Incident",
 	 bty = "n")
   means = aggregate(TR[,HEADER[i]]~Id, data = TR, mean)
   means = as.list(means)
